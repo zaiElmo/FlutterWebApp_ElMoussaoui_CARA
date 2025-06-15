@@ -169,7 +169,7 @@ class _RecipePageState extends State<RecipePage> {
 
   Future _fetchRecipe() async {
     try {
-      final recipe = await _recipeService.getOneRecipe(widget.id);
+      final recipe = await _recipeService.getOneRecipe(widget.id ?? _recipe!.id);
       setState(() {
         _recipe = recipe;
       });
