@@ -17,7 +17,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Domain\" />
       <Folder Include="wwwroot\" />
       <Folder Include="wwwroot\images\" />
     </ItemGroup>
