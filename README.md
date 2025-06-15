@@ -22,9 +22,21 @@ Nach dem Herunterladen des Projekts erfolgt die Ausführung des Servers durch de
 ## Benutzeranleitung
 Startet man die Applikation, wird zunächst die Listenansicht angezeigt. Beim erstmaligen Start ist diese Liste leer. In der oberen rechten Ecke befinden sich zwei Schaltflächen: ein Plus-Button sowie ein Würfel-Button.
 
-Durch das Klicken auf das Plus-Symbol gelangt man zur Eingabemaske für neue Rezepte. Dort müssen der Name, eine Beschreibung sowie die Zubereitungsdauer verpflichtend angegeben werden, um ein Rezept speichern zu können. Optional besteht die Möglichkeit, ein Bild hinzuzufügen. Nach Abschluss der Eingabe wird das Rezept durch Betätigen der Schaltfläche „Speichern“ gesichert. Anschließend erfolgt eine automatische Rückleitung zur Startseite, auf der das neu angelegte Rezept nun in der Liste erscheint.
+![image](https://github.com/user-attachments/assets/1ff11c03-0589-4b2a-a028-ea34d357c654)
+
+
+Durch das Klicken auf das Plus-Symbol gelangt man zur Eingabemaske für neue Rezepte. Dort müssen der Name, eine Beschreibung sowie die Zubereitungsdauer verpflichtend angegeben werden, um ein Rezept speichern zu können. Optional besteht die Möglichkeit, ein Bild hinzuzufügen. Nach Abschluss der Eingabe wird das Rezept durch Betätigen der Schaltfläche „Speichern“ gesichert. 
+
+![image](https://github.com/user-attachments/assets/e02fabd6-7e23-40ab-a202-7a6fc667d870)
+
+Anschließend erfolgt eine automatische Rückleitung zur Startseite, auf der das neu angelegte Rezept nun in der Liste erscheint.
+
+![image](https://github.com/user-attachments/assets/0e77024f-4533-4110-be43-5e705ba4065b)
 
 Zudem kann man durch Klicken auf ein vorhandenes Listenelement oder den Würfel-Button zur Detailansicht gelangen. Der Würfel-Button dient hierbei einer besonderen Funktion: Er wählt per Zufall ein Rezept aus der Datenbank aus und zeigt dieses direkt in der Detailansicht an. In der Detailansicht werden sämtliche Informationen eines Rezepts vollständig dargestellt. Dort kann man zu dem ein Rezept mithilfe des Mülleimer-Buttons löschen oder mittels des Stift-Buttons editieren.
+
+![image](https://github.com/user-attachments/assets/1ec6db15-18c2-47f3-a9f9-c650fdffe551)
+
 
 ## Einleitung 
 Im Rahmen der Vorlesung „Projekt: Webentwicklung“ wurde die Konzeption und Umsetzung einer Webanwendung mit einem serverseitigen und einem clientseitigen Bestandteil als Ziel vorgegeben. 
