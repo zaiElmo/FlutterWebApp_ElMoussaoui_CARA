@@ -22,20 +22,24 @@ Nach dem Herunterladen des Projekts erfolgt die Ausführung des Servers durch de
 ## Benutzeranleitung
 Startet man die Applikation, wird zunächst die Listenansicht angezeigt. Beim erstmaligen Start ist diese Liste leer. In der oberen rechten Ecke befinden sich zwei Schaltflächen: ein Plus-Button sowie ein Würfel-Button.
 
-![image](https://github.com/user-attachments/assets/1ff11c03-0589-4b2a-a028-ea34d357c654)
+![image](https://github.com/user-attachments/assets/1ff11c03-0589-4b2a-a028-ea34d357c654) *Abb. 1 Listenansicht - Anwendung mit noch keinen gespeicherten Rezepten*
 
+
+![image](https://github.com/user-attachments/assets/e1f91883-d04a-46fe-b49f-eaef773dbb0a) *Abb. 2 Listenansicht - Anwedung mit gespeicherten Rezepten*
 
 Durch das Klicken auf das Plus-Symbol gelangt man zur Eingabemaske für neue Rezepte. Dort müssen der Name, eine Beschreibung sowie die Zubereitungsdauer verpflichtend angegeben werden, um ein Rezept speichern zu können. Optional besteht die Möglichkeit, ein Bild hinzuzufügen. Nach Abschluss der Eingabe wird das Rezept durch Betätigen der Schaltfläche „Speichern“ gesichert. 
 
-![image](https://github.com/user-attachments/assets/e02fabd6-7e23-40ab-a202-7a6fc667d870)
+![image](https://github.com/user-attachments/assets/e02fabd6-7e23-40ab-a202-7a6fc667d870) *Abb. 3 Eingabemaske zum Anlegen von Rezepten*
+
 
 Anschließend erfolgt eine automatische Rückleitung zur Startseite, auf der das neu angelegte Rezept nun in der Liste erscheint.
 
-![image](https://github.com/user-attachments/assets/0e77024f-4533-4110-be43-5e705ba4065b)
+![image](https://github.com/user-attachments/assets/0e77024f-4533-4110-be43-5e705ba4065b) *Abb. 4 Listenansicht - Anwendung mit einem gespeicherten Rezept*
+
 
 Zudem kann man durch Klicken auf ein vorhandenes Listenelement oder den Würfel-Button zur Detailansicht gelangen. Der Würfel-Button dient hierbei einer besonderen Funktion: Er wählt per Zufall ein Rezept aus der Datenbank aus und zeigt dieses direkt in der Detailansicht an. In der Detailansicht werden sämtliche Informationen eines Rezepts vollständig dargestellt. Dort kann man zu dem ein Rezept mithilfe des Mülleimer-Buttons löschen oder mittels des Stift-Buttons editieren.
 
-![image](https://github.com/user-attachments/assets/1ec6db15-18c2-47f3-a9f9-c650fdffe551)
+![image](https://github.com/user-attachments/assets/1ec6db15-18c2-47f3-a9f9-c650fdffe551) *Abb. 5 Detailansicht*
 
 
 ## Einleitung 
@@ -57,7 +61,7 @@ Bei der serverseitigen Komponente stand die sichere und zuverlässige Verwaltung
 
 Das Frontend basiert auf Flutter in der Version 3.32. Flutter ist ein Open-Source Framework von Google und eignet sich insbesondere für die Entwicklung von Benutzeroberflächen. 
 
-Die serverseitige Logik wurde mit ASP.NET Core und .NET 9 unter Verwendung einer Minimal API realisiert. Dieser Ansatz ermöglicht eine kompakte und übersichtliche Strukturierung der Endpunkte und eignet sich insbesondere für Anwendungen mit einem moderaten Funktionsumfang. In diesem Projekt dient die Minimal API zur Bereitstellung sämtlicher REST-konformer Schnittstellen, über die grundlegende CRUD-Operationen (Create, Read, Update, Delete) auf Rezeptdaten sowie eine zufällige Auswahl von Rezepten umgesetzt werden.
+Die serverseitige Logik wurde mit ASP.NET Core und .NET 9 unter Verwendung einer Minimal API realisiert. Dieser Ansatz ermöglicht eine kompakte und übersichtliche Strukturierung der Endpunkte und eignet sich insbesondere für Anwendungen mit einem moderaten Funktionsumfang. In diesem Projekt dient die Minimal API zur Bereitstellung sämtlicher REST-konformer Schnittstellen, über die grundlegende CRUD-Operationen auf Rezeptdaten sowie eine zufällige Auswahl von Rezepten umgesetzt werden.
 
 Die Datenhaltung erfolgt über eine SQLite-Datenbank, die mithilfe von Entity Framework Core angebunden ist. Durch die gewählte Code-First-Vorgehensweise lassen sich C#-Modelle direkt in die zugrunde liegende Datenstruktur überführen, was die Weiterentwicklung und Pflege der Datenbank vereinfacht. SQLite wurde als Datenbanklösung aufgrund ihrer einfachen Handhabung, der Möglichkeit zur lokalen Speicherung sowie der nahtlosen Integration in das .NET-Ökosystem gewählt. Zudem erfordert der Einsatz von SQLite keinen separaten Datenbankserver, was den Betrieb insbesondere in kleineren Projekten erleichtert.
 
@@ -67,9 +71,9 @@ Zur Unterstützung der Entwicklung wurden verschiedene Werkzeuge eingesetzt: Die
 ### Allgemeiner Aufbau
 Die Anwendung ist in zwei logische Hauptteile untergliedert: das Frontend im Verzeichnis cara/ und das Backend im Verzeichnis cara.api/. Die Kommunikation zwischen Client und Server wird anhand der folgenden Abbildung beschrieben. 
 
-![Kommunikation zwischen Client und Server](https://github.com/user-attachments/assets/2686d763-e21a-4752-a8bc-6aae8fa701e7)*Abb. 1 Kommunikation zwischen Client und Server*
+![image](https://github.com/user-attachments/assets/9ec5d8ef-0119-4960-9d88-cccb04120245)*Abb. 6 Kommunikation zwischen Client und Server*
 
-Bei der Ausführung einer der bereitgestellten Funktionen – etwa einer der CRUD-Operationen (Create, Read, Update, Delete) oder der zufallsbasierten Rezeptauswahl – initiiert der Client eine HTTP-Anfrage an die serverseitige API. Diese Minimal-API verarbeitet die eingehende Anfrage, führt die entsprechende Logik aus und greift dabei, sofern erforderlich, auf die von Entity-Framework angebundene SQLite-Datenbank zu. Die verarbeiteten Ergebnisse werden anschließend in strukturierter Form an den Client zurückgesendet, wo sie in der Benutzeroberfläche dargestellt werden.
+Bei der Ausführung einer der bereitgestellten Funktionen – etwa einer der CRUD-Operationen oder der zufallsbasierten Rezeptauswahl – initiiert der Client eine HTTP-Anfrage an die serverseitige API. Diese Minimal-API verarbeitet die eingehende Anfrage, führt die entsprechende Logik aus und greift dabei, sofern erforderlich, auf die von Entity-Framework angebundene SQLite-Datenbank zu. Die verarbeiteten Ergebnisse werden anschließend in strukturierter Form an den Client zurückgesendet, wo sie in der Benutzeroberfläche dargestellt werden.
 
 ### Frontend
 ```
@@ -121,7 +125,7 @@ Mit CARA wurde ein funktionsfähiger Prototyp für eine Webanwendung zur digital
 
 Die Projektumsetzung hat gezeigt, dass sich diese Technologien – insbesondere Flutter und .NET – effizient miteinander kombinieren lassen und eine kompakte, modulare Lösung ermöglichen. Durch die Verwendung von Entity Framework Core im Code-First-Modus konnte das Datenbankschema direkt aus den C#-Modellen generiert und bei Bedarf migrationsbasiert angepasst werden. Diese Arbeitsweise hat sich als besonders vorteilhaft für Prototyping und schnelle Iterationen erwiesen.
 
-Ursprünglich war das Ziel des Projekts nicht die Erstellung einer produktionsreifen Anwendung, sondern die Umsetzung einer funktional vollständigen Web-App mit exemplarischem Charakter. Im Laufe der praktischen Arbeit und begleitender Recherchen wurde jedoch zunehmend deutlich, welche Anforderungen über die bloße Funktionalität hinaus notwendig wären, um CARA in Richtung Produktivbetrieb weiterzuentwickeln. Dazu zählen unter anderem: eine klar geschichtete und wartbare Backend-Architektur nach dem Prinzip der Clean Architecture, ein expliziter Service-Layer zur Trennung von Geschäftslogik und Schnittstellen, Mechanismen zur sicheren Dateiverwaltung, Paging- und Caching-Funktionalitäten zur Verbesserung der Performance sowie erweiterte Nutzerfunktionen wie eine Rezeptsuche, Tagging, Favoritenverwaltung oder ein Bewertungssystem. Auch Authentifizierung und Autorisierung fehlen bislang vollständig, was ein zentrales Kriterium für den produktiven Einsatz darstellt.
+Ziel des Projekts war nicht die Erstellung einer produktionsreifen Anwendung, sondern die Umsetzung einer funktional vollständigen Web-App. Im Laufe der praktischen Arbeit und begleitender Recherchen wurde jedoch zunehmend deutlich, welche Anforderungen über die bloße Funktionalität hinaus notwendig wären, um CARA in Richtung Produktivbetrieb weiterzuentwickeln. Dazu zählen unter anderem: eine klar geschichtete und wartbare Backend-Architektur nach dem Prinzip der Clean Architecture, ein expliziter Service-Layer zur Trennung von Geschäftslogik und Schnittstellen, Mechanismen zur sicheren Dateiverwaltung, Paging- und Caching-Funktionalitäten zur Verbesserung der Performance sowie erweiterte Nutzerfunktionen wie eine Rezeptsuche, Tagging, Favoritenverwaltung oder ein Bewertungssystem. Auch Authentifizierung und Autorisierung fehlen bislang vollständig, was ein zentrales Kriterium für den produktiven Einsatz darstellt. Da diese Anforderungen zur Entwicklung dessen nicht im Fokus standen, ist CARA ein Prototyp und konzetriert sich eher auf die Umsetzung der Funktionen. 
 
 ### Persönlicher Lernzuwachs
 
@@ -130,5 +134,3 @@ Im Zuge des Projekts wurden fundierte Kenntnisse in der Webentwicklung aufgebaut
 ### Ausblick
 
 Zukünftige Projektphasen sollten mit einem geschärften Anforderungsprofil beginnen, das gezielt auf die Entwicklung einer wartbaren, skalierbaren und sicher betriebenen Webanwendung ausgerichtet ist. Dazu gehört nicht nur die Umsetzung technischer Standards, sondern auch die frühzeitige Berücksichtigung von Themen wie Barrierefreiheit, Sicherheit, Nutzerfreundlichkeit sowie Testbarkeit und Deployment-Strategien.
-
-"# zaiElmo-FlutterWebApp_ElMoussaoui_CARA" 
