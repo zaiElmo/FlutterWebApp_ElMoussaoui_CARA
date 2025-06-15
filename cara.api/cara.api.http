@@ -1,0 +1,6 @@
+@cara.api_HostAddress = http://localhost:5000
+
+GET {{cara.api_HostAddress}}/recipes/
+Accept: application/json
+
+###
