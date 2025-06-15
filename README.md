@@ -15,8 +15,8 @@
    2. [Ausblick](#ausblick) 
 
 ## Installation und Start
-Für den Start der Anwendungen sind bestimmte Systemvoraussetzungen zu erfüllen. Da der Server mithilfe der .NET 9 SDK 
-und die Benutzoberfläche mit Flutter 3.32.0 realisiert wurde, ist es Vorrausetzung diese zuvor zur installieren. 
+Für den Start der Anwendungen sind bestimmte Systemvoraussetzungen zu erfüllen. Da der Server mithilfe der [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) 
+und die Benutzoberfläche mit [Flutter 3.32.0](https://docs.flutter.dev/get-started/install/windows/web#use-vs-code-to-install-flutter) realisiert wurde, ist es Vorrausetzung diese zuvor zur installieren. 
 Nach dem Herunterladen des Projekts erfolgt die Ausführung des Servers durch den Befehl `dotnet run` in dem Ordner *cara.api*. Der Start des Clients erfolgt über den Befehl `flutter run` im Verzeichnis *cara*.
 
 ## Benutzeranleitung
